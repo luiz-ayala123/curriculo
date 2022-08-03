@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&display=swap');
+:root{
+	--cor-base-texto: #333333;
+	--cor-vermerlho: #B44C4C;
+	--cor-vermerlho-escuro:#6D0200;
+	--cor-borda: #7E1E1A;
+	--cor-cinza-claro: #EEEEEE;
+	--cor-cinza-escuro: #8B8B8B;
+	--cor-preto: #3B3B3B;
+	--cor-preto-escuro: #272727;
+	--cor-amarelo: #F7D358;
+	--cor-amarelo-escuro:#FFBF00;
+	--cor-azul: #0040FF;
+	--cor-azul-escuro: #0000FF;
+	--cor-azul-borda:#81F7F3;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body{
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.profissao-nome-atual{
+	font-weight: bold;
+	color: var(--cor-vermerlho);
+	font-size: 1rem;
+}
+.profissao-nome{
+	font-weight: 400;
+	color: var(--cor-vermerlho);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+.flex{
+	display: flex;
+}
+.caixa-alta{
+	text-transform: uppercase;
+}
+.caixa-alta h1{
+	font-size: 1.5rem
+}
+.espacamento{
+	letter-spacing:5px; 
+}
+#bloco-titulo{
+	align-items: center;
+	height: 90px;
+	justify-content: center;
+}
+#bloco-titulo img{
+	height: 30px;
+	margin-right: 10px;
+}
+#foto-luiz{
+	align-items: center;
+	height: 600px;
+	overflow: hidden;
+}
+#foto-luiz img{
+	width: 100%
+}
+#bloco-nome{
+	align-items: center;
+	flex-direction: column;
+	height: 150px;
+	justify-content: center;
+	width: 450px;
+}
+.titulo-secao{
+	background-color: var(--cor-cinza-claro);
+	border-top: solid 2px var(--cor-azul-borda);
+	font-size: 1rem;
+	padding: 1rem 0;
+	text-align: center;
+}
+.bloco-arejado{
+	padding: 2rem;
+}
+section p{
+	line-height: 2rem;
+
+}
+.bloco-arejado .inferior-margem{
+	margin-bottom: 2rem;
+}
+.experiencia-dados{
+	margin-bottom: 2rem;
+}
+.experiencia-dados *{
+	line-height: 1.2rem;
+}
+.expreiencia-data{
+	color: var(--cor-cinza-escuro);
+}
+#bloco-img-enderco{
+	background-color: var(--cor-amarelo-escuro);
+}
+#link-endereco{
+	background-color: var(--cor-amarelo);
+}
+#bloco-img-telefone{
+	background-color: var(--cor-azul-escuro);
+}
+#link-telefone{
+	background-color: var(--cor-azul);
+}
+#bloco-img-site{
+	background-color: var(--cor-vermerlho-escuro);
+}
+#link-site{
+	background-color: var(--cor-borda);
+}
+#bloco-img-email{
+	background-color: var(--cor-preto-escuro);
+}
+#link-email{
+	background-color: var(--cor-preto);
+}
+.linha{
+	display: flex;
+	height: 4rem;
+	width: 100%;
+	transition: all ease-in-out .2s;
+}
+.linha:hover{
+	transform: scale(1.05);
+
+}
+.linha a{
+	line-height: 4rem;
+	flex: 6;
+	color: white;
+	padding-left: 1rem;
+	text-decoration: none;
+}
+footer{
+	width: 100%;
+}
+.bloco-img{
+	box-shadow: inset 0 0 10px 5px rgba(0,0,0,0.1);
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex: 1;
+}
+.bloco-img img{
+	height: 1.5rem;
+}
+.negrito{
+	font-weight: bold;
+}
+@media screen and (min-width: 960px){
+	body{
+		align-items: left;
+	}
+	header{
+		align-items: flex-start;
+		display: grid;
+		grid-template: "bloco-titulo bloco-nome foto-luiz";
+        grid-template-columns: auto auto 25rem;
+        height: 9.8rem; 
+	}
+	#foto-luiz{
+		background: url(../img/foto-luiz.jpg) no-repeat no-repeat center center;
+        background-attachment: fixed;
+        background-size: 50%;
+        background-position: right top;
+        box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.2);
+        grid-area: foto-luiz;
+        height: 25%;
+        min-height: 60vh;        
+        position: fixed;
+        right: 0;
+        width: 30vw;
+	}
+	#foto-luiz img{
+		min-width: 500px;
+	}
+	#bloco-titulo{
+		height: auto;
+		padding-top: 2rem;
+		padding-left: 2rem;
+	}
+	#bloco-nome{
+		align-items: flex-end;
+		font-size: 0.8rem;
+        grid-area: bloco-nome;
+        height: auto;
+        padding-top: 2rem;
+        padding-right: 2rem; 
+	}
+	#bloco-info{
+		width: 70vw;
+	}
+	#bloco-experiencias{
+		width: 70vw;
+	}
+	footer{
+		bottom: 0;
+		box-shadow: 0px 20px 10px 10px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;    
+        height: 43vh;   
+        position: fixed;        
+        width: 30vw;
+        right: 0;
+	}
+	footer .linha{
+		flex: 1;
+	}
+}
